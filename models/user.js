@@ -3,7 +3,7 @@ const mongoose=require("mongoose");
 //Schema for users
 const UserSchema=new mongoose.Schema({
     
-    Name: {
+    Username: {
         type:String,
         required:false,
         unique:false,

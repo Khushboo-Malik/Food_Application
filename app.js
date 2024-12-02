@@ -15,6 +15,10 @@ app.use(express.urlencoded({ extended: false }));
 const cookieParser = require('cookie-parser');
 app.use(cookieParser());
 
+const userRoutes=require("./routes/user.js");
+app.use("/user",userRoutes);
+
+
 
 connectMongoDb(process.env.MONGO_URL)
   .then(() => console.log("MongoDB Connected!"));
